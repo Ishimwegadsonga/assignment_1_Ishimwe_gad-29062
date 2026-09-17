@@ -1,9 +1,9 @@
 PL/SQL Assignment One — Sunrise Supermarket
 
-Instructor:** Eric Maniraguha  
+Instructor:Eric Maniraguha  
 TA: Afanyu Emmanuel  
 Student Name:Ishimwe Gad  
-Student ID: 29062  
+Student ID:29062  
 DBMS Used: Oracle Database 21c (PL/SQL)
 
  1. Business Scenario Summary
@@ -33,16 +33,16 @@ Sunrise Supermarket is a retail store analyzing customer behavior, sales trends,
 - **Business Value:** Pinpoints top revenue-generating customers for loyalty rewards.
 
 5. DENSE_RANK() (Customer Spend Ranking)
-- Explanation:** Ranks customers from highest total spend to lowest.
-- Business Value:** Segments customers into distinct tier rankings.
+- Explanation: Ranks customers from highest total spend to lowest.
+- Business Value: Segments customers into distinct tier rankings.
 
  6. ROW_NUMBER() (Order Sequencing)
 - Explanation: Numbers each customer's orders chronologically (1st purchase, 2nd purchase, etc.).
 - Business Value: Tracks customer retention and purchasing cadence over time.
 
  7. SUM() OVER () (Running Total Revenue)
-- Explanation:** Computes cumulative store revenue over time ordered by purchase date.
-- Business Value:** Tracks sales trajectories and revenue milestones.
+- Explanation:Computes cumulative store revenue over time ordered by purchase date.
+- Business Value:Tracks sales trajectories and revenue milestones.
 
  8. LAG() (Days Between Orders)
 - Explanation: Calculates the number of days elapsed between consecutive orders for repeat buyers.
@@ -54,5 +54,5 @@ Sunrise Supermarket is a retail store analyzing customer behavior, sales trends,
 
 
 ## 4. Challenges & Resolutions
-- **Handling NULLs on Inactive Users:** Used `NVL(SUM(...), 0)` to ensure users without orders returned `0` spend rather than null values.
-- **Running Total Duplication:** Aggregated daily revenue prior to applying `SUM() OVER ()` to prevent duplicate values on multi-order dates.
+- Handling NULLs on Inactive Users:** Used `NVL(SUM(...), 0)` to ensure users without orders returned `0` spend rather than null values.
+- Running Total Duplication: Aggregated daily revenue prior to applying `SUM() OVER ()` to prevent duplicate values on multi-order dates.
